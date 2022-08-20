@@ -1,10 +1,8 @@
-\documentclass[10.5pt, a4paper]{article}
+\documentclass[10pt, a4paper]{article}
 
+\usepackage{ctex}
 \usepackage{xeCJK}
-\newCJKfontfamily{\heiti}[AutoFakeBold={3.17}]{SimHei}
-
 \usepackage{caption}
-\usepackage{pifont}
 \usepackage{geometry}
 \geometry{
     left = 0.6in,
@@ -12,17 +10,23 @@
     top = 0.8in,
     bottom = 1.0in
 }
-\usepackage{amssymb,amsbsy,amsmath,xcolor,mathrsfs,graphicx}
-\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{tikz}
 \usepackage{tasks}
 \settasks{
     label = \Alph*. ,
     label-width = 16pt
 }
 
-\renewcommand{\title}[3]{
+\newcommand{\Title}[3]{
     \begin{center}
-        \Large\heiti #1~年~#2~月 Scratch~#3级考试
+        \Large \textbf{中国电子学会 #1~年~#2~月 Scratch~#3级考试}
     \end{center}
 }
 \newcommand{\TimeAndName}[1]{
@@ -30,13 +34,12 @@
         考试时间:~#1~ 分钟 \qquad\qquad\qquad\qquad 姓名:\underline{\quad\quad\quad\quad}
     \end{center}
 }
-
+\pagestyle{empty}
 \begin{document}
-    \title{2020}{6}{一}
+    \Title{2020}{6}{一}
     
     \TimeAndName{60}
     
-    \vspace{1cm}
     {\noindent\heiti 第一部分、单选题(共 25 题,每题 2 分,共50分.)}
 
     \begin{enumerate}
@@ -62,7 +65,7 @@
         \item 默认的小猫有两个造型(分别为造型1和造型2)。在运行下面的程序后，没有看到造型的切换，下面哪一项可以修复这个问题?(\qquad)
         \begin{tasks}(2)
             \task 修改为\includegraphics[width=.12\textwidth]{3a.png}
-            \task 修改为\includegraphics[width=.06\textwidth]{3b.png}
+            \task 修改为\includegraphics[width=.08\textwidth]{3b.png}
             \task 编辑小猫的造型
             \task 删除小猫的第一个造型：造型1
         \end{tasks}
@@ -109,7 +112,6 @@
             \task \includegraphics[width=.15\textwidth]{5d.png}
         \end{tasks}
 
-    % %     \newpage
         % 6
         \item 以下哪个可以实现小猫向上移动?(\qquad)
         \begin{tasks}(4)
@@ -119,7 +121,6 @@
             \task \includegraphics[width=.15\textwidth]{6d.png}
         \end{tasks}
 
-        \newpage
         % 7
         \item 下面地图中每格的长度是50步长，小猫要想拿到苹果，下面哪组程序可以实现?(\qquad)
         \begin{tasks}(4)
@@ -128,8 +129,7 @@
             \task \includegraphics[width=.12\textwidth]{7c.png}
             \task \includegraphics[width=.12\textwidth]{7d.png}
         \end{tasks}
-        
-        % 8
+           
         \item 以下哪个按钮可以实现造型水平翻转功能?(\qquad)
         \begin{tasks}(4)
             \task \includegraphics[width=.03\textwidth]{8a.png}
@@ -167,7 +167,6 @@
             \end{minipage}
         \end{figure}
 
-    %     \newpage
         % 9
         \item 在上面图形基础上，只能移动一根火柴棍，不能变成下面哪个选项的图形?(\qquad)
         \begin{tasks}(4)
@@ -194,7 +193,7 @@
             \task C
             \task D
         \end{tasks}
-
+        
         % 12
         \item 如上图,地图中每格的长度是50步长，小猫要想拿到苹果，下面哪组程序可以实现?(\qquad)
         \begin{tasks}(4)
@@ -204,25 +203,24 @@
             \task \includegraphics[width=.1\textwidth]{12d.png}
         \end{tasks}
 
-        \newpage
         % 13
         \item 在菜单栏中以下哪个可以实现语言的切换?(\qquad)
         \begin{tasks}(4)
-            \task \includegraphics[width=.08\textwidth]{13a.png}
-            \task \includegraphics[width=.06\textwidth]{13b.png}
-            \task \includegraphics[width=.08\textwidth]{13c.png}
-            \task \includegraphics[width=.08\textwidth]{13d.png}
+            \task \includegraphics[width=.05\textwidth]{13a.png}
+            \task \includegraphics[width=.05\textwidth]{13b.png}
+            \task \includegraphics[width=.05\textwidth]{13c.png}
+            \task \includegraphics[width=.07\textwidth]{13d.png}
         \end{tasks}
 
         % 14
         \item 下图为造型的编辑界面，以下哪个可以实现变形功能?(\qquad)
         \begin{tasks}(4)
-            \task \includegraphics[width=.04\textwidth]{14a.png}
-            \task \includegraphics[width=.04\textwidth]{14b.png}
-            \task \includegraphics[width=.04\textwidth]{14c.png}
-            \task \includegraphics[width=.04\textwidth]{14d.png}
+            \task \includegraphics[width=.03\textwidth]{14a.png}
+            \task \includegraphics[width=.03\textwidth]{14b.png}
+            \task \includegraphics[width=.03\textwidth]{14c.png}
+            \task \includegraphics[width=.03\textwidth]{14d.png}
         \end{tasks}
-        
+    
         % 15
         \item 如下图,想要录制一个声音，应该点击哪个按钮?(\qquad)
         \begin{tasks}(4)
@@ -255,8 +253,7 @@
                 \caption*{第18题}
             \end{minipage}
         \end{figure}
-
-    %     \newpage
+        
         % 16
         \item 如上图,哪组积木块可以实现如下图小猫面向下移动?(\qquad)
         \begin{tasks}(4)
@@ -266,7 +263,6 @@
             \task \includegraphics[width=.1\textwidth]{16d.png}
         \end{tasks}
 
-    % %     \newpage
         % 17
         \item 在声音编辑器中，能够实现声音头和尾互换，应该选择以下哪一个?(\qquad)
         \begin{tasks}(4)
@@ -331,6 +327,7 @@
             \task \includegraphics[width=.1\textwidth]{21d.png}
         \end{tasks}
 
+        \newpage
         % 22
         \item 关于造型的说法正确的是?(\qquad)
         \begin{tasks}(2)
@@ -348,7 +345,7 @@
             \task 声音模块
             \task 事件模块
         \end{tasks}
-    
+
         % 24
         \item 找规律填数17,12,15,14,13,(\quad),(\quad)?(\qquad)
         \begin{tasks}(4)
@@ -357,27 +354,7 @@
             \task 14,15
             \task 12,7
         \end{tasks}
-
-    % %     \begin{figure}[htbp]
-    % %         \centering
-    % %         \begin{minipage}[t]{.23\textwidth}
-    % %             \centering
-    % %             \includegraphics[width=\textwidth]{24.png}
-    % %             \caption*{第24题}
-    % %         \end{minipage}
-    % %         \begin{minipage}[t]{.33\textwidth}
-    % %             \centering
-    % %             \includegraphics[width=\textwidth]{28.png}
-    % %             \caption*{第28题}
-    % %         \end{minipage}
-    % %         \begin{minipage}[t]{.42\textwidth}
-    % %             \centering
-    % %             \includegraphics[width=\textwidth]{30.png}
-    % %             \caption*{第30题}
-    % %         \end{minipage}
-    % %     \end{figure}
         
-    % \newpage
         % 25
         \item 如果将声音的音量设定为最大，那么音量的最大值是?(\qquad)
         \begin{tasks}(4)
@@ -419,7 +396,6 @@
     %     \end{minipage}
     % \end{figure}
 
-    \vspace{1cm}
     {\noindent\heiti 第二部分、判断题(共 10 题,每题 2 分,共20分.)}
     \begin{enumerate}
         \setcounter{enumi}{25}
@@ -437,11 +413,10 @@
         
         %30
         \item 在角色列表区的任意空白区域点击鼠标右键，会弹出一个菜单，可以对角色进行“复制”、“导出”、“删除”的操作.(\qquad)
-        
+
         %31
         \item 如图所示积木\includegraphics[width=.12\textwidth]{31.png}的运算结果是35.(\qquad)
         
-    % %     \newpage
         %32
         \item 绘制背景可以选择\includegraphics[width=.02\textwidth]{32.png}按钮.(\qquad)
         
@@ -459,7 +434,7 @@
     {\noindent\heiti 第三部分、编程题(共 2 题,共30分.)}
     \begin{enumerate}
         \setcounter{enumi}{35}
-    
+        
         %36
         \item 球飞了:
         \begin{figure}[htbp]
@@ -482,8 +457,7 @@
                 \includegraphics[width=\textwidth]{36.png}
             \end{minipage}
         \end{figure}
-
-        \vfill
+            
         % 37
         \item 希神吓走猫头鹰：
         
@@ -508,55 +482,5 @@
                 \includegraphics[width=\textwidth]{37.png}
             \end{minipage}
         \end{figure}
-        \vfill
     \end{enumerate}
-
-    \newpage
-    \begin{center}
-        \Huge \heiti 参考答案
-    \end{center}
-
-        \begin{tasks}[label=\arabic*.](5)
-            \task C
-            \task A
-            \task D
-            \task B
-            \task A
-
-            \task A
-            \task B
-            \task A
-            \task A
-            \task A
-
-            \task A
-            \task A
-            \task A
-            \task B
-            \task B
-
-            \task A
-            \task C
-            \task B
-            \task C
-            \task D
-
-            \task D
-            \task C
-            \task A
-            \task A
-            \task D
-
-            \task $\times$
-            \task $\times$
-            \task $\times$
-            \task $\times$
-            \task $\times$
-
-            \task $\checkmark$
-            \task $\times$
-            \task $\checkmark$
-            \task $\times$
-            \task $\times$
-        \end{tasks}
 \end{document}
